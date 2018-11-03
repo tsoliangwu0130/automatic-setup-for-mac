@@ -1,0 +1,6 @@
+- name: Ensure cask-browser packages are the latest.
+  become: no
+  homebrew_cask: name={{ item }} state=latest
+  with_items:
+    - firefox
+    - chromium

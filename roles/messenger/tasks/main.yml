@@ -1,0 +1,7 @@
+- name: Ensure cask-messenger packages are the latest.
+  become: no
+  homebrew_cask: name={{ item }} state=latest
+  with_items:
+    - telegram
+    - slack
+    - skype
