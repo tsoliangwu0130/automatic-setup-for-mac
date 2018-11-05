@@ -88,5 +88,10 @@ $ sh main.sh
 * webdev
     * hugo
 
+# Future Works
+* Combined with .dotfiles
+* More Testing
+* Autumatic setup for Linux
+
 # See Also
 * [My Development Environment](https://hackmd.io/s/rJasOz9oQ#)
