@@ -1,5 +1,5 @@
-- name: Ensure cask-virtualenv packages are the latest.
-  become: no
+- name: Ensure virtualenv packages are the latest.
+  become: yes 
   homebrew_cask: name={{ item }} state=latest
   with_items:
     - virtualbox

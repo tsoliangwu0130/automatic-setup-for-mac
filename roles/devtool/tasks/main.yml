@@ -1,20 +1,19 @@
-- name: Ensure homebrew-devtool packages are the latest.
+- name: Ensure devtool packages are the latest.
   become: no
   homebrew: name={{ item }} state=latest
   with_items:
-    - zsh
     - tree
     - tmux
     - wget
     - git
     - node
+    - pipenv
 
-- name: Ensure cask-devtool packages are the latest.
+- name: Ensure devtool packages are the latest.
   become: no
   homebrew_cask: name={{ item }} state=latest
   with_items:
     - iterm2
     - dash
     - ranger
-    - filezilla
     - sourcetree

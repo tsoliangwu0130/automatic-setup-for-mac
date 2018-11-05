@@ -1,5 +1,5 @@
-- name: Ensure homebrew cask java are the latest.
-  become: no
-  homebrew: name={{ item }} state=latest
+- name: Ensure java language is the latest.
+  become: yes
+  homebrew_cask: name={{ item }} state=latest
   with_items:
-    - brew cask install java
+    - java

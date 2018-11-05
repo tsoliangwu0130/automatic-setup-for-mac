@@ -1,4 +1,4 @@
-- name: Ensure homebrew-r packages are the latest.
+- name: Ensure r-language is the latest.
   become: no
   homebrew: name={{ item }} state=latest
   with_items:

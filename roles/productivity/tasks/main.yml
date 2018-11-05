@@ -1,13 +1,19 @@
-- name: Ensure cask-productivity packages are the latest.
-  become: no
+- name: Ensure productivity packages are the latest.
+  become: yes
   homebrew_cask: name={{ item }} state=latest
   with_items:
     - alfred
     - Keepassxc
-    - todoist
     - keka
     - appcleaner
     - trello-x
-    - f-lux
+    - flux
+    - spark
+    - spectacle
     - boostnote
-    - libreoffice
+    - qlcolorcode
+    - qlstephen
+    - qlmarkdown
+    - quicklook-json
+    - qlimagesize
+    - provisionql

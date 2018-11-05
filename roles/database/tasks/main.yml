@@ -1,4 +1,4 @@
-- name: Ensure homebrew-database packages are the latest.
+- name: Ensure database packages are the latest.
   become: no
   homebrew: name={{ item }} state=latest
   with_items:
@@ -6,7 +6,7 @@
     - mongodb 
     - sqlite
 
-- name: Ensure cask-database gui packages are the latest.
+- name: Ensure database gui packages are the latest.
   become: no
   homebrew_cask: name={{ item }} state=latest
   with_items:

@@ -1,4 +1,4 @@
-- name: Ensure cask-audio packages are the latest.
+- name: Ensure audio packages are the latest.
   become: no
   homebrew_cask: name={{ item }} state=latest
   with_items:

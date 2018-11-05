@@ -1,7 +1,6 @@
-- name: Ensure cask-cloud packages are the latest.
+- name: Ensure cloud packages are the latest.
   become: no
   homebrew_cask: name={{ item }} state=latest
   with_items:
     - dropbox
-    - google-drive
     - google-cloud-sdk

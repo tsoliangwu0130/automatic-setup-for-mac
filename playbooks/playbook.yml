@@ -1,17 +1,18 @@
 - hosts: alexsu
   roles:
-    # - audio
-    # - browser 
-    # - cloud
-    # - database 
-    # - devtool
-    # - editor
-    # - messenger
-    # - music
-    # - office
-    # - photo
-    # - productivity
-    # - python
+    - audio
+    - browser 
+    - cloud
+    - database 
+    - devtool
+    - editor
+    - gis
+    - java
+    - messenger
+    - music
+    - office
+    - photo
+    - productivity
     - r
-    # - virtualenv
-    # - webdev
+    - virtualenv
+    - webdev
