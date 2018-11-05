@@ -1,0 +1,21 @@
+- name: ensure hostname var is defined
+  command: 'false'
+  when: not hostname
+
+- name: ensure hostname is {{hostname}}
+  become: yes
+  shell: scutil --set HostName {{hostname}}
+
+- name: ensure localhostname is {{hostname}}
+  become: yes
+  shell: scutil --set LocalHostName {{hostname}}
+
+- name: ensure computer name is {{hostname}}
+  become: yes
+  shell: scutil --set ComputerName {{hostname}}
+
+- name: ensure Homebrew is tapped to homebrew/completions
+  homebrew_tap: tap=homebrew/completions state=present
+
+- name: ensure Homebrew itself and installed packages are the latest
+  homebrew: state=latest update_homebrew=yes upgrade_all=yes

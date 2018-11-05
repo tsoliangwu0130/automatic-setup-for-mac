@@ -2,10 +2,12 @@
   become: no
   homebrew: name={{ item }} state=latest
   with_items:
+    - zsh
     - tree
     - tmux
     - wget
     - git
+    - node
 
 - name: Ensure cask-devtool packages are the latest.
   become: no
