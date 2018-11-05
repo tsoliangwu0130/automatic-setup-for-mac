@@ -1,4 +1,4 @@
-# Automatic Setup with Ansible
+# Automatic Setup for MacOS
 
 # Usage
 ```shell 
